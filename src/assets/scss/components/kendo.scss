@@ -1,0 +1,264 @@
+@import "../variables/variables";
+
+.k-timepicker {
+    span {
+        span {
+            background: transparent !important;
+        }
+    }
+}
+
+.k-animation-container {
+    .k-list-container {
+        &::-webkit-scrollbar {
+            width: 13px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #0090e7 !important;
+        }
+    }
+
+}
+
+.k-widget.k-calendar {
+    .k-calendar-view {
+        .k-content {
+            tbody {
+                tr {
+                    .k-state-selected {
+                        .k-link {
+                            background-color: #283046  !important; // primary
+                            border-color: #283046  !important; // primary
+                            color: white !important;
+                        }
+                    }
+                }
+            }
+
+            width: 100% !important;
+        }
+    }
+
+    .k-footer {
+        .k-link {
+            color: #283046  !important; // primary
+        }
+    }
+}
+
+.dark-layout .k-animation-container {
+    background: #283046   !important; // $theme-dark-body-bg
+    color: white !important;
+
+    .k-list-container {
+        background: #283046  !important; // $theme-dark-body-bg
+
+        &::-webkit-scrollbar {
+            width: 13px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: #283046 !important; // $theme-dark-body-bg
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #0090e7 !important;
+        }
+
+        .k-list {
+            li {
+
+                &:hover {
+                    background: #283046  !important; // primary
+                }
+            }
+
+            .k-item {
+                color: white !important;
+            }
+        }
+
+    }
+}
+
+.dark-layout {
+
+    // Calendario
+    .k-calendar-container {
+        background: #283046 !important; // $theme-dark-body-bg
+    }
+
+    .k-widget.k-calendar {
+        background: #283046 !important; // $theme-dark-body-bg
+
+        .k-header {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white;
+        }
+
+        .k-calendar-view {
+            background: #283046 !important; // $theme-dark-body-bg
+
+            .k-content {
+                background: #283046 !important; // $theme-dark-body-bg
+
+                thead {
+                    color: white !important;
+
+                    tr {
+                        background: #283046  !important; // $theme-dark-table-header-bg
+
+                        th {
+                            background: #283046  !important; // $theme-dark-table-header-bg
+                            color: white !important;
+                        }
+                    }
+                }
+
+                tbody {
+                    color: white !important;
+
+                    tr {
+                        background: #283046 !important; // $theme-dark-table-bg
+
+                        td {
+                            background: #283046 !important; // $theme-dark-table-bg
+                        }
+                    }
+                }
+            }
+        }
+
+        .k-footer {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white !important;
+        }
+    }
+
+    //end calendar
+
+    .k-widget.k-timepicker.input-form {
+        background: #283046 !important; // $theme-dark-body-bg
+        color: white !important;
+
+        .input-form.k-input {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white !important;
+        }
+    }
+}
+
+.dark-layout {
+    .k-calendar-container {
+        background: #283046 !important; // $theme-dark-body-bg
+    }
+
+    .k-widget.k-calendar {
+        background: #283046 !important; // $theme-dark-body-bg
+
+        .k-header {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white;
+        }
+
+        .k-calendar-view {
+            background: #283046 !important; // $theme-dark-body-bg
+
+            .k-content {
+                background: #283046 !important; // $theme-dark-body-bg
+
+                thead {
+                    color: white !important;
+
+                    tr {
+                        background: #283046  !important; // $theme-dark-table-header-bg
+
+                        th {
+                            background: #283046  !important; // $theme-dark-table-header-bg
+                            color: white !important;
+                        }
+                    }
+                }
+
+                tbody {
+                    color: white !important;
+
+                    tr {
+                        background: #283046 !important; // $theme-dark-table-bg
+
+                        td {
+                            background: #283046 !important; // $theme-dark-table-bg
+                        }
+                    }
+                }
+            }
+        }
+
+        .k-footer {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white !important;
+        }
+    }
+}
+
+.dark-layout {
+    .k-calendar-container {
+        background: #283046 !important; // $theme-dark-body-bg
+    }
+
+    .k-widget.k-calendar {
+        background: #283046 !important; // $theme-dark-body-bg
+
+        .k-header {
+            background: #283046 !important; // $theme-dark-body-bg
+            color: white;
+        }
+
+        .k-calendar-view {
+            background: #283046 !important; // $theme-dark-body-bg
+
+            .k-content {
+                background: #283046 !important; // $theme-dark-body-bg
+
+                thead {
+                    color: white !important;
+
+                    tr {
+                        background: #283046  !important; // $theme-dark-table-header-bg
+
+                        th {
+                            background: #283046  !important; // $theme-dark-table-header-bg
+                            color: white !important;
+                        }
+                    }
+                }
+
+                tbody {
+                    color: white !important;
+
+                    tr {
+                        background: #283046  !important; // $theme-dark-table-bg
+
+                        td {
+                            background: #283046  !important; // $theme-dark-table-bg
+                        }
+                    }
+                }
+            }
+        }
+
+        .k-footer {
+            background: #283046  !important; // $theme-dark-body-bg
+            color: white !important;
+        }
+    }
+
+    .k-datepicker:hover {
+        background-color: #2c2828 !important;
+    }
+}
