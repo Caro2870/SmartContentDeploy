@@ -150,10 +150,10 @@
           <b-col>
             <div class="d-flex">
               <b-form-file @change="handleFileUpload" accept=".xlsx, .xls"/>
-              <b-button v-b-tooltip.hover.top="'Upload file'" @click="uploadFile" variant="outline-primary"
+              <!-- <b-button v-b-tooltip.hover.top="'Upload file'" @click="uploadFile" variant="outline-primary"
                 class="btn-icon">
                 <feather-icon icon="UploadIcon" />
-              </b-button>
+              </b-button> -->
             </div>
           </b-col>
         </b-row>
@@ -227,6 +227,7 @@ export default {
       openModalAddServiceOwn: false,
       clientImage: null,
       viewImage: null,
+      selectedFile: null,
     };
   },
 
@@ -379,6 +380,9 @@ export default {
             formData.append('mission', this.businessInfo.mission);
             formData.append('vision', this.businessInfo.vision);
             formData.append('values', this.businessInfo.values);
+            if(this.selectedFile != null){
+              formData.append('excel_copies', this.selectedFile);
+            }            
             if(this.clientImage != null){
               formData.append('image', this.clientImage);
             }
