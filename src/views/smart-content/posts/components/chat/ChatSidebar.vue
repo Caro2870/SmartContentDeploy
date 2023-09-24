@@ -133,7 +133,7 @@
               <b-form-group>
                 <div class="px-2">
                   <b-form-checkbox v-model="templateForm.includeBusinessInfo" switch value="yes" unchecked-value="no" :disabled="isEditing">
-                    Incluir ubicación, teléfono, correo
+                    Incluir página web, teléfono, correo
                   </b-form-checkbox>
                   <b-form-group label="Productos/servicios a incluir">
                     <v-select v-model="templateForm.productsToInclude" :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
