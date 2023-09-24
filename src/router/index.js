@@ -24,7 +24,7 @@ const router = new VueRouter({
   },
   routes: [
     { path: '/'
-    , redirect: { name: 'auth-login' } 
+    , redirect: { name: 'user-posts' } 
   },
     ...apps,
     ...dashboard,
