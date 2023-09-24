@@ -42,29 +42,29 @@ const router = new VueRouter({
   ],
 })
 
-router.beforeEach((to, _, next) => {
-  const isLoggedIn = isUserLoggedIn()
-  console.log('isLoggedIn ', isLoggedIn)
-  console.log('canNavigate(to) ', canNavigate(to))
+router.beforeEach((to, from, next) => {
+  const isLoggedIn = isUserLoggedIn();
 
-  if (!canNavigate(to)) {
-    // Redirect to login if not logged in
-    if (!isLoggedIn) return next({ name: 'auth-login' })
-
-    // If logged in => not authorized
-    return next({ name: 'misc-not-authorized' })
+  if (to.name !== "auth-login") {
+    if (!isLoggedIn) {
+      // Si el usuario no está autenticado, redirige a la página de inicio de sesión.
+      return next({ name: 'auth-login' });
+    }
   }
 
-  console.log('paso la primera validacion')
-  // Redirect if logged in
+  // Si el usuario está autenticado, verifica si se requiere una redirección.
   if (to.meta.redirectIfLoggedIn && isLoggedIn) {
-    const userData = getUserData()
-    next(getHomeRouteForLoggedInUser(userData ? userData.role : null))
+    const userData = getUserData();
+    const homeRoute = getHomeRouteForLoggedInUser(userData ? userData.role : null);
+    
+    // Redirige al usuario a la ruta de inicio correspondiente.
+    return next(homeRoute);
   }
-  console.log('paso la segunda validacion')
 
-  return next()
-})
+  // Si el usuario está autenticado y no se necesita una redirección, o si es una ruta pública, permite la navegación.
+  next();
+});
+
 
 // ? For splash screen
 // Remove afterEach hook if you are not using splash screen

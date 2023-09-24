@@ -56,7 +56,6 @@ export default {
     }),
   },
   beforeCreate() {
-    console.log('upc')
     // Set colors in theme
     const colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark']
 
