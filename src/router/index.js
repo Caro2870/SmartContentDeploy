@@ -45,25 +45,27 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   const isLoggedIn = isUserLoggedIn();
 
-  if (to.name !== "auth-login") {
+  // Check if the route is neither 'auth-login' nor 'auth-register'
+  if (to.name !== "auth-login" && to.name !== "auth-register") {
     if (!isLoggedIn) {
-      // Si el usuario no está autenticado, redirige a la página de inicio de sesión.
+      // If the user is not authenticated, redirect to the login page.
       return next({ name: 'auth-login' });
     }
   }
 
-  // Si el usuario está autenticado, verifica si se requiere una redirección.
+  // If the user is authenticated, check if a redirection is needed.
   if (to.meta.redirectIfLoggedIn && isLoggedIn) {
     const userData = getUserData();
     const homeRoute = getHomeRouteForLoggedInUser(userData ? userData.role : null);
-    
-    // Redirige al usuario a la ruta de inicio correspondiente.
+
+    // Redirect the user to the appropriate home route.
     return next(homeRoute);
   }
 
-  // Si el usuario está autenticado y no se necesita una redirección, o si es una ruta pública, permite la navegación.
+  // If the user is authenticated and no redirection is needed, or if it's a public route, allow navigation.
   next();
 });
+
 
 
 // ? For splash screen

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div id="buttonDiv"></div>
+      <div id="buttonDiv" class="d-flex justify-content-center"></div>
     </div>
   </template>
   

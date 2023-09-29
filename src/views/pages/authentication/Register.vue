@@ -152,7 +152,7 @@
             </b-form>
           </validation-observer> -->
 
-          <p class="text-center mt-2">
+          <p class="mt-2">
             <span>Already have an account?</span>
             <b-link :to="{name:'auth-login'}">
               <span>&nbsp;Sign in instead</span>
