@@ -7,10 +7,10 @@
     <template #vertical-menu-items="{isMouseHovered, isVerticalMenuCollapsed}" v-if="$route.name != 'amg-messages'">
       <sidebar :isMouseHovered="isMouseHovered" :isVerticalMenuCollapsed="isVerticalMenuCollapsed"></sidebar>
     </template>
-    <app-customizer
+    <!-- <app-customizer
       v-if="showCustomizer"
       slot="customizer"
-    />
+    /> -->
   </layout-vertical>
 </template>
 
