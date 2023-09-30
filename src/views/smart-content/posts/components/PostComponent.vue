@@ -52,6 +52,7 @@
               <!-- post img -->
               <b-img v-if="data.image_url" block fluid-grow rounded center class="mb-25 custom-image"
                 :src="data.image_url" />
+              <b-img v-else block fluid rounded center class="mb-25 custom-image" :src="NoImage" />
             </b-card>
             </b-col>
           </b-row>
@@ -69,6 +70,7 @@ import Ripple from 'vue-ripple-directive'
 import { kFormatter } from '@core/utils/filter'
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 import PostsService from '@/views/smart-content/posts/posts.service.js'
+import NoImage from '@/assets/images/no-image/noimage.jpg';
 
 export default {
   components: {
@@ -110,6 +112,7 @@ export default {
       toPage: 0,
       posts: [],
       isLoading: false,
+      NoImage,
     }
   },
   props: {
@@ -218,7 +221,7 @@ export default {
 <style scoped>
 .custom-image {
   width: 100%;
-  height: 120px;
+  /* height: 120px; */
   /* Set your desired max height for the image */
   object-fit: cover;
   /* This ensures the image covers the container while maintaining aspect ratio */
